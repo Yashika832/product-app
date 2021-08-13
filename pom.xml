@@ -31,10 +31,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 </distributionManagement>
 
 <scm>
-<connection>scm:git:git@github.com:krishnamurthypradeep/devopsinfrastructure.git</connection>
-<developerConnection>scm:git:git@github.com:krishnamurthypradeep/devop
-s-infrastructure.git</developerConnection>
-<url>git@github.com:krishnamurthypradeep/devopsinfrastructure.git</url>
+<connection>scm:git:git@github.com:yashikaawasthi/product-app.git</connection>
+<developerConnection>scm:git:git@github.com:yashikaawasthi/product-app.git</developerConnection>
+<url>git@github.com:yashikaawasthi/product-app.git</url>
 <tag>v0.0.1</tag>
 </scm>
 
