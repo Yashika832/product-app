@@ -36,8 +36,8 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git@github.com:DebjotiMallick/product-app.git</connection>
-		<developerConnection>scm:git:git@github.com:DebjotiMallick/product-app.git</developerConnection>
+		<connection>scm:git:git@github.com:Yashika832/product-app.git</connection>
+		<developerConnection>scm:git:git@github.com:Yashika832/product-app.git</developerConnection>
 		<url>git@github.com:DebjotiMallick/product-app.git</url>
 		<tag>v0.0.1</tag>
 	</scm>
