@@ -1,52 +1,33 @@
 package com.myapp.spring.config;
 
-
-
-
 import javax.sql.DataSource;
-
-
-
 
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.stereotype.Component;
 
-
-
-
 import com.zaxxer.hikari.HikariDataSource;
-
-
-
 
 @Component
 
 public class MyConfig {
 
+	@Bean
 
+	public DataSource dataSource() {
 
-@Bean
+		HikariDataSource dataSource = new HikariDataSource();
 
-    public DataSource dataSource() {
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
-       
+		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/devop");
 
-HikariDataSource dataSource = new HikariDataSource();
+		dataSource.setUsername("root");
 
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSource.setPassword("root");
 
-        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/devops");
+		return dataSource;
 
-        dataSource.setUsername("admin");
-
-        dataSource.setPassword("admin");
-
-        return dataSource;
-
-    }
-
-
-
+	}
 
 }

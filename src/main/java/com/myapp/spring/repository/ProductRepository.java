@@ -8,16 +8,12 @@ import org.springframework.stereotype.Repository;
 
 import com.myapp.spring.model.Product;
 
-
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Integer> {
-
-// List<Product> findAll();
-Optional<List<Product>> findByPriceGreaterThanEqual(Double price);
-
-Optional<List<Product>> findByProductName(String productName);
-// List<Product> findProductByName();
-Optional<List<Product>> findByProductNameOrPrice(String productName, Double price);
-
+public interface ProductRepository extends JpaRepository<Product, Integer>{
+	
+	Optional<List<Product>> findByPriceGreaterThanEqual(Double price);
+	Optional<List<Product>> findByProductName(String productName);
+	Optional<List<Product>> findByProductNameOrPrice(String productName, Double price);
+	
 
 }

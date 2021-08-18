@@ -11,13 +11,12 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="devopsproducts")
+@Table(name="products")
 public class Product {
- 
+	
 	@Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "PRODUCCT_ID")
-	
+	@Column(name = "PRODUCT_ID")
 	private Integer productId;
 	
 	@Column(name = "PRODUCT_NAME")
@@ -32,13 +31,15 @@ public class Product {
 	@NotNull
 	private Double price;
 	
-	@Column(name = "PRODUCT_Rating")
+	@Column(name = "PRODUCT_RATING")
 	@NotNull
 	private Double starRating;
+	
 	
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
+
 
 	public Product(@NotNull String productName, @NotNull String description, @NotNull Double price,
 			@NotNull Double starRating) {
@@ -48,50 +49,62 @@ public class Product {
 		this.starRating = starRating;
 	}
 
+
 	public Integer getProductId() {
 		return productId;
 	}
+
 
 	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
+
 	public String getProductName() {
 		return productName;
 	}
+
 
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
 
+
 	public String getDescription() {
 		return description;
 	}
+
 
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
+
 	public Double getPrice() {
 		return price;
 	}
+
 
 	public void setPrice(Double price) {
 		this.price = price;
 	}
 
+
 	public Double getStarRating() {
 		return starRating;
 	}
+
 
 	public void setStarRating(Double starRating) {
 		this.starRating = starRating;
 	}
 
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(description, price, productId, productName, starRating);
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -104,6 +117,7 @@ public class Product {
 				&& Objects.equals(productId, other.productId) && Objects.equals(productName, other.productName)
 				&& Objects.equals(starRating, other.starRating);
 	}
+
 
 	@Override
 	public String toString() {
@@ -122,4 +136,6 @@ public class Product {
 		return builder.toString();
 	}
 	
+	
+
 }
