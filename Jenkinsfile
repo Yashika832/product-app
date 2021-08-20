@@ -1,7 +1,7 @@
 node {
     def mvnHome
     stage('Prepare') {
-        git url: 'git@github.com:HarshaPuthussery/product-app.git', branch: 'develop'
+        git url: 'git@github.com:Yashika832/product-app.git', branch: 'develop'
         mvnHome = tool 'mvn'
     }
     stage('Build') {
@@ -23,7 +23,7 @@ node {
         }
     }
     stage('Deploy') {
-        sh 'curl -u admin:admin -T target/**.war "http://localhost:5050/manager/text/deploy?path=/ibmdevops&update=true"'
+        sh 'curl -u admin:admin -T starget/**.war "http://localhost:5050/manager/text/deploy?path=/ibmdevops&update=true"'
     }
     stage("Smoke Test"){
         sh 'curl --retry-delay 10 --retry 5 http://localhost:5050/ibmdevops/api/v1/products"
